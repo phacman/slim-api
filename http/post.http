@@ -1,0 +1,8 @@
+POST http://localhost:1972/post
+Content-Type: application/json
+Accept: application/json
+
+{
+  "company": "ИЦ ИАС",
+  "project": "Очень крутой проект!"
+}

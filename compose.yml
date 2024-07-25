@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: .
+    image: ${COMPOSE_PROJECT_NAME}:${VERSION}
+    restart: on-failure
+    working_dir: /usr/share/nginx/html
+    volumes:
+      - ./html:/usr/share/nginx/html
+    ports:
+      - ${PORT}:80
