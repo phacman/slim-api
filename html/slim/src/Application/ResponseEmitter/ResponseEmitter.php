@@ -18,6 +18,8 @@ class ResponseEmitter extends SlimResponseEmitter
         $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
         $response = $response
+            ->withHeader('X-Api-Engine', 'Slim 4.14.0')
+            ->withHeader('X-Api-Structure', 'Slim Skeleton 4.5.0')
             ->withHeader('Access-Control-Allow-Credentials', 'true')
             ->withHeader('Access-Control-Allow-Origin', $origin)
             ->withHeader(
