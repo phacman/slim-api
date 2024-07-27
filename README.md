@@ -19,6 +19,9 @@ Execute http-file from `http` directory
 - **index.http:** GET: `/`
 - **get.http:** GET: `/get`
 - **post.http:** POST: `/post`
+- **php.http:** GET: 
+  - php: version, extensions: `/php`
+  - phpinfo(): `/php/info`
 
 ## Analogs
 - PHP Native: [micro-start-php](https://github.com/phacman/micro-start-php)

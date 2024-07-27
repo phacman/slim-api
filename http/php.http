@@ -1,0 +1,4 @@
+GET http://localhost:1972/php/info
+Accept: application/json
+
+###
