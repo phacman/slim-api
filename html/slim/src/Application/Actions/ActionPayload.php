@@ -33,7 +33,7 @@ class ActionPayload implements JsonSerializable
     }
 
     /**
-     * @return array|null|object
+     * @return array|object|null
      */
     public function getData()
     {
@@ -52,9 +52,9 @@ class ActionPayload implements JsonSerializable
             'statusCode' => $this->statusCode,
         ];
 
-        if ($this->data !== null) {
+        if (null !== $this->data) {
             $payload['data'] = $this->data;
-        } elseif ($this->error !== null) {
+        } elseif (null !== $this->error) {
             $payload['error'] = $this->error;
         }
 

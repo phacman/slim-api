@@ -27,6 +27,9 @@ abstract class Action
     }
 
     /**
+     * @param  Request                 $request
+     * @param  Response                $response
+     * @param  array                   $args
      * @throws HttpNotFoundException
      * @throws HttpBadRequestException
      */
@@ -58,8 +61,9 @@ abstract class Action
     }
 
     /**
-     * @return mixed
+     * @param  string                  $name
      * @throws HttpBadRequestException
+     * @return mixed
      */
     protected function resolveArg(string $name)
     {
@@ -72,6 +76,7 @@ abstract class Action
 
     /**
      * @param array|object|null $data
+     * @param int               $statusCode
      */
     protected function respondWithData($data = null, int $statusCode = 200): Response
     {

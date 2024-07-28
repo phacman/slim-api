@@ -20,7 +20,7 @@ use Throwable;
 class HttpErrorHandler extends SlimErrorHandler
 {
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     protected function respond(): Response
     {

@@ -10,25 +10,27 @@ use DI\ContainerBuilder;
 use Slim\Factory\AppFactory;
 use Slim\Factory\ServerRequestCreatorFactory;
 
-require __DIR__ . '/../vendor/autoload.php';
+$dirname = dirname(__DIR__);
+require $dirname.'/vendor/autoload.php';
 
 // Instantiate PHP-DI ContainerBuilder
 $containerBuilder = new ContainerBuilder();
 
-if (false) { // Should be set to true in production
-	$containerBuilder->enableCompilation(__DIR__ . '/../var/cache');
-}
+// Should be set to true in production
+//if (false) {
+//    $containerBuilder->enableCompilation($dirname . '/var/cache');
+//}
 
 // Set up settings
-$settings = require __DIR__ . '/../app/settings.php';
+$settings = require $dirname.'/app/settings.php';
 $settings($containerBuilder);
 
 // Set up dependencies
-$dependencies = require __DIR__ . '/../app/dependencies.php';
+$dependencies = require $dirname.'/app/dependencies.php';
 $dependencies($containerBuilder);
 
 // Set up repositories
-$repositories = require __DIR__ . '/../app/repositories.php';
+$repositories = require $dirname.'/app/repositories.php';
 $repositories($containerBuilder);
 
 // Build PHP-DI Container instance
@@ -40,11 +42,11 @@ $app = AppFactory::create();
 $callableResolver = $app->getCallableResolver();
 
 // Register middleware
-$middleware = require __DIR__ . '/../app/middleware.php';
+$middleware = require $dirname.'/app/middleware.php';
 $middleware($app);
 
 // Register routes
-$routes = require __DIR__ . '/../app/routes.php';
+$routes = require $dirname.'/app/routes.php';
 $routes($app);
 
 /** @var SettingsInterface $settings */

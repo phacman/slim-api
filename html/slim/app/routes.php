@@ -27,7 +27,7 @@ return function (App $app) {
             'hello' => 'world',
             'привет' => 'мир',
         ];
-        $payload = json_encode($raw, 128|256);
+        $payload = json_encode($raw, 128 | 256);
         $response->getBody()->write($payload);
 
         return $response;
@@ -38,7 +38,7 @@ return function (App $app) {
             'hello' => 'world',
             'привет' => 'мир',
         ];
-        $response->getBody()->write(json_encode($body, 128|256));
+        $response->getBody()->write(json_encode($body, 128 | 256));
 
         return $response;
     });
@@ -48,10 +48,10 @@ return function (App $app) {
             $body = [
                 'php' => [
                     'extensions' => get_loaded_extensions(),
-                    'version' => phpversion(),
-                ]
+                    'version' => PHP_VERSION,
+                ],
             ];
-            $response->getBody()->write(json_encode($body, 128|256));
+            $response->getBody()->write(json_encode($body, 128 | 256));
 
             return $response;
         });

@@ -12,9 +12,9 @@ interface UserRepository
     public function findAll(): array;
 
     /**
-     * @param int $id
-     * @return User
+     * @param  int                   $id
      * @throws UserNotFoundException
+     * @return User
      */
     public function findUserOfId(int $id): User;
 }
