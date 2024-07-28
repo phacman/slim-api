@@ -1,12 +1,19 @@
 # Slim API
-Simple REST API based on Slim Skeleton 4.5.0. Built image: `32.8 MB`;
+Simple REST API based on Slim Skeleton 4.5.0. 
+
+Built image: `46.2MB`;
 
 ## Under the hood
-- Alpine 3.18.4 
+- Vanilla Alpine 3.18.4 
 - NGINX
 - PHP-FPM
-- PHP 8.2 
+- PHP 8.2.16 
 - Slim Skeleton 4.5.0
+
+### PHP extension
+- cgi-fcgi, Core, date, filter, hash, intl, json, ldap, 
+- libxml, mbstring, pcre, random, readline, Reflection, 
+- session, sodium, SPL, standard, xml, zlib
 
 ## Install
 Just run this command to start

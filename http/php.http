@@ -1,4 +1,4 @@
-GET http://localhost:1972/php/info
+GET http://localhost:1972/php
 Accept: application/json
 
 ###
