@@ -1,0 +1,5 @@
+GET http://localhost:1972/users
+Accept: application/json
+
+### /users
+### /users/1

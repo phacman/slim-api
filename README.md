@@ -22,6 +22,9 @@ Execute http-file from `http` directory
 - **php.http:** GET: 
   - php: version, extensions: `/php`
   - phpinfo(): `/php/info`
+- **users.http:** GET: 
+  - persons list: `/users`
+  - one person: `/users/1`
 
 ## Analogs
 - PHP Native: [micro-start-php](https://github.com/phacman/micro-start-php)

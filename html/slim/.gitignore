@@ -10,6 +10,7 @@ nbproject/
 # Logs
 /logs/*
 !/logs/README.md
+!/logs/app.log
 # Cache
 /var/cache/*
 .phpunit.result.cache
